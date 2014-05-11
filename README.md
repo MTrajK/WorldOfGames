@@ -140,11 +140,84 @@
 ####**Класата _<a href="WorldOfGames/Forma.cs" target="_blank">Forma.cs</a>_ и методите `public abstract List<Point> Vrti()` и `public void Smeni()`**####
 
 ```c#
-  public class java {
-     private abstract void a(int b){}
-     private override void a(string x){}
-     private virtual double b(byte t){}
-  }
+  abstract class Forma
+    {
+        public Color Boja;
+        public List<Point> Koordinati;
+        public List<Point> Proverka;
+        public int Pozicija;
+        public int ProverkaPoz;
+        public bool SmeniPoz;       // ova go koristam za da znam koga da ja smenam pozicijata
+                                    // zosto odkako ke ja svrtam i ne e validna ke se napravi cekor nadole i ke se smeni pozicijata, a ne treba
+
+        /// <summary>
+        /// Оваа метода е статична за да можам без креирање класа да ја повикувам.
+        /// </summary>
+        /// <param name="Broj"> Рандом бројот според која ја креирам формата. </param>
+        /// <returns> Враќа нова истанца од наследената форма. </returns>
+        public static Forma Odberi(int Broj)
+        {
+            if (Broj == 0)
+                return new Forma1();
+            if (Broj == 1)
+                return new Forma2();
+            if (Broj == 2)
+                return new Forma3();
+            if (Broj == 3)
+                return new Forma4();
+            if (Broj == 4)
+                return new Forma5();
+            if (Broj == 5)
+                return new Forma6();
+            return new Forma7();
+        }
+
+        /// <summary>
+        /// Овој метод служи за да се добие наредната состојба со поместување на формата.
+        /// </summary>
+        /// <param name="Pravec">0- за надоле, 1- за лево, 2- за десно. </param>
+        /// <returns> Враќа листа со координати на поместувањето. </returns>
+        public List<Point> Pomesti(int Pravec)
+        {
+            Proverka = new List<Point>();
+            int x = 0;
+            int y = 0;
+
+            if (Pravec == 0)
+                y++;
+            else if (Pravec == 1)
+                x--;
+            else if (Pravec == 2)
+                x++;
+
+            foreach (Point p in Koordinati)
+                Proverka.Add(new Point(p.X + x, p.Y + y));
+
+            SmeniPoz = false;
+
+            return Proverka;
+        }
+
+        /// <summary>
+        /// Овој метод служи за да се добие наредната состојба со вртење на формата.
+        /// </summary>
+        /// <returns> Враќа листа со координати на поместувањето. </returns>
+        public abstract List<Point> Vrti();
+
+        /// <summary>
+        /// Овој метод се повикува кога новодобиените координати се валидни и финалните координати треба да ја добијат вредноста на пробните и финалната позиција да ја добие позицијата од проверката.
+        /// </summary>
+        public void Smeni()
+        {
+            Koordinati = new List<Point>();
+
+            foreach (Point p in Proverka)
+                Koordinati.Add(p);
+
+            if (SmeniPoz)
+                Pozicija = ProverkaPoz;
+               
+        }
 ```
 
 
