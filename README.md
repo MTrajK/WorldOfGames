@@ -141,7 +141,7 @@
 ####**Класата _<a href="WorldOfGames/Forma.cs" target="_blank">Forma.cs</a>_ и методите `public abstract List<Point> Vrti()` и `public List<Point> Pomesti(int Pravec)`**####
 
 ```c#
-  abstract class Forma
+    abstract class Forma
     {
         public Color Boja;
         public List<Point> Koordinati;
@@ -235,6 +235,51 @@
 
 И за на крај методот `public List<Point> Vrti()` е различен во сите  7 форми бидејќи секоја форма на свој начин се врти.
 
+Еве пример од вртењето на долгнавестото.
+
+```c#
+        public override List<Point> Vrti()
+        {
+            Proverka = new List<Point>();
+            
+            if (Pozicija == 0)
+            {
+                ProverkaPoz = 1;
+                Proverka.Add(new Point(Koordinati[0].X + 2, Koordinati[0].Y - 1));
+                Proverka.Add(new Point(Koordinati[1].X + 1, Koordinati[1].Y));
+                Proverka.Add(new Point(Koordinati[2].X, Koordinati[2].Y + 1));
+                Proverka.Add(new Point(Koordinati[3].X - 1, Koordinati[3].Y + 2));
+            }
+            else if (Pozicija == 1)
+            {
+                ProverkaPoz = 2;
+                Proverka.Add(new Point(Koordinati[0].X - 2, Koordinati[0].Y + 2));
+                Proverka.Add(new Point(Koordinati[1].X - 1, Koordinati[1].Y + 1));
+                Proverka.Add(new Point(Koordinati[2].X, Koordinati[2].Y));
+                Proverka.Add(new Point(Koordinati[3].X + 1, Koordinati[3].Y - 1));
+            }
+            else if (Pozicija == 2)
+            {
+                ProverkaPoz = 3;
+                Proverka.Add(new Point(Koordinati[0].X + 1, Koordinati[0].Y - 2));
+                Proverka.Add(new Point(Koordinati[1].X, Koordinati[1].Y - 1));
+                Proverka.Add(new Point(Koordinati[2].X - 1, Koordinati[2].Y));
+                Proverka.Add(new Point(Koordinati[3].X - 2, Koordinati[3].Y + 1));
+            }
+            else
+            {
+                ProverkaPoz = 0;
+                Proverka.Add(new Point(Koordinati[0].X - 1, Koordinati[0].Y + 1));
+                Proverka.Add(new Point(Koordinati[1].X, Koordinati[1].Y));
+                Proverka.Add(new Point(Koordinati[2].X + 1, Koordinati[2].Y - 1));
+                Proverka.Add(new Point(Koordinati[3].X + 2, Koordinati[3].Y - 2));
+            }
+
+            SmeniPoz = true;
+
+            return Proverka;
+        }
+```
 
 ##**4. Изработиле и лиценца**##
 ####**<a href="https://github.com/MTrajK" target="_blank">Мето Трајковски 121047</a>**####
