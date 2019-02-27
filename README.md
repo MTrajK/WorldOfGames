@@ -138,7 +138,7 @@
 * Отварањето на полињата во играта **_[Minesweeper](#23-minesweeper)_**, кое на прв поглед би се чинело много сложено, но се решава на едноставен начин со помош на *[BFS (Breadth-first search)](https://en.wikipedia.org/wiki/Breadth-first_search)*.
 * И како најинтересен метод би го издвоиле вртењето на формите во играта **_[Tetris](#25-tetris)_** чии што проблем е решен со помош на апстрактна класа, бидејќи има 7 различни форми, а тие 7 форми имаат некои различни и некои сосема исти методи. Во продолжение подетално за овој метод.
 
-#### Класата _[Forma.cs](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/src/WorldOfGames/Forma.cs)_ и методите `public abstract List<Point> Vrti()` и `public List<Point> Pomesti(int Pravec)`
+#### Класата _[Forma.cs](https://github.com/MTrajK/WorldOfGames/blob/master/src/WorldOfGames/Forma.cs)_ и методите `public abstract List<Point> Vrti()` и `public List<Point> Pomesti(int Pravec)`
 
 ```c#
     abstract class Forma
