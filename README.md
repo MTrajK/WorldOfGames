@@ -46,6 +46,8 @@
 
 ![alt text](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/images/2048.png "2048")
 
+**_[Преземи ја само 2048 (само за Windows OS)](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/dist/2048.exe)_**
+
 ---
 
 ### 2.2 Flappy Bird
@@ -64,6 +66,8 @@
 
 ![alt text](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/images/flappy_bird.png "Flappy Bird")
 
+**_[Преземи ја само Flappy Bird (само за Windows OS)](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/dist/FlappyBird.exe)_**
+
 ---
 
 ### 2.3 Minesweeper
@@ -79,6 +83,8 @@
 И играта се игра со помош на маусот. Лево копче за отварање поле и десно копче за маркирање (_ставање знаменце_) на поле.
 
 ![alt text](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/images/minesweeper.png "Minesweeper")
+
+**_[Преземи ја само Minesweeper (само за Windows OS)](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/dist/Minesweeper.exe)_**
 
 ---
 
@@ -105,6 +111,8 @@
 
 ![alt text](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/images/snake.png "Snake")
 
+**_[Преземи ја само Snake (само за Windows OS)](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/dist/Snake.exe)_**
+
 ---
 
 ### 2.5 Tetris
@@ -122,6 +130,8 @@
 Играта се игра со помош на 4-те копчиња со стрелки. Со копчето горе (**↑**) се врти формата, со копчињата десно (**→**) и лево (**←**) се поместува формата на соодветната страна и со копчето доле (**↓**) се забрзува падот на формата.
 
 ![alt text](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/images/tetris.png "Tetris")
+
+**_[Преземи ја само Tetris (само за Windows OS)](https://raw.githubusercontent.com/MTrajK/WorldOfGames/master/dist/Tetris.exe)_**
 
 
 
